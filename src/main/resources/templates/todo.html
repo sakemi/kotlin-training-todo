@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO</title>
+</head>
+<body>
+<table border="1">
+   <table>
+       <tr><th>ID</th><th>タスク名</th></tr>
+       <tr th:each="todo: ${todoList}" th:object="${todo}">
+           <td th:text="*{id}"/>
+           <td th:text="*{name}"/>
+       </tr>
+   </table>
+    <form method="GET" action="create">
+        <label>タスク名：</label>
+        <input type="text" name="name" />
+        <input type="submit" value="作成" />
+    </form>
+    <form method="GET" action="delete">
+        <label>ID：</label>
+        <input type="text" name="id" />
+        <input type="submit" value="削除" />
+    </form>
+</body>
+</html>

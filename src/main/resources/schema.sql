@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS todo.todo(id int AUTO_INCREMENT NOT NULL PRIMARY KEY, name varchar(255), done tinyint)
